@@ -6,6 +6,6 @@ export default axios.create({
     Authorization: "Bearer " + process.env.API_KEY,
   },
   //   Authorization:
-  //     "Bearer 0ruQM8Sn4_6ZGzh_p17BnDRyu3TOFyrNlLg-XO6EGqhf0-_KjcuOpzRuehPB6nP11VYiiTXY7CMjSWmMndbGvqkmyEAXRdgirXobfH-ChlzwPwGvfjgKcKhKo08LZXYx",
+  //     "Bearer ruQM8Sn4_6ZGzh_p17BnDRyu3TOFyrNlLg-XO6EGqhf0-_KjcuOpzRuehPB6nP11VYiiTXY7CMjSWmMndbGvqkmyEAXRdgirXobfH-ChlzwPwGvfjgKcKhKo08LZXYx",
   // },
 });
