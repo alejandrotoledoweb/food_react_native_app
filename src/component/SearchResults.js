@@ -1,8 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import ResultDetails from "./ResultDetails";
+import { withNavigation } from "react-navigation";
 
-const SearchResults = ({ title, results }) => {
+const SearchResults = ({ title, results, navigation }) => {
+  if (!results) {
+    return null;
+  }
   return (
     <View>
       <Text style={styles.title}>{title}</Text>
@@ -12,7 +22,13 @@ const SearchResults = ({ title, results }) => {
         data={results}
         keyExtractor={(result) => result.id}
         renderItem={({ item }) => {
-          return <ResultDetails item={item} />;
+          return (
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Show", { id: item.id })}
+            >
+              <ResultDetails item={item} />
+            </TouchableOpacity>
+          );
         }}
       />
     </View>
@@ -35,4 +51,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchResults;
+export default withNavigation(SearchResults);

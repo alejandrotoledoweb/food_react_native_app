@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   image: {
-    width: 200,
+    width: 250,
     height: 150,
     borderRadius: 15,
-    marginRight: 10,
+    marginRight: 15,
   },
   description: {
     fontSize: 14,
